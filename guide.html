@@ -24,7 +24,74 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Puedes ajustar el tamaño a tu preferencia */
+        .destino-img {
+            width: 100%;
+            height: 320px;      /* Aumenta el valor para hacerlas más grandes */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px; /* Opcional, para esquinas redondeadas */
+        }
+        body {
+            background-color: #e0fdbc;
+        }
+        body {
+    background-color: #c1db7f;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+.fondo-olas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 350px;
+    z-index: -1;
+    background: linear-gradient(180deg, #ddffb5 0%, #a5ff95 100%);
+}
+.fondo-olas::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="%239cc495" fill-opacity="1" d="M0,224L60,202.7C120,181,240,139,360,117.3C480,96,600,96,720,128C840,160,960,224,1080,229.3C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    pointer-events: none;
+}
+.img-mismo-tamano {
+    width: 100% !important;
+    height: 220px !important;   /* Puedes ajustar la altura a tu preferencia */
+    object-fit: cover !important;
+    display: block;
+}
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    height: 650px; /* Ajusta el alto según lo que necesites */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+    </style>
 </head>
+
+<body>
+    <!-- Coloca esto justo después de la etiqueta <body> -->
+<div class="fondo-olas"></div>
 
 <body>
     <!-- Topbar Start -->
@@ -38,25 +105,14 @@
                         <p><i class="fa fa-phone-alt mr-2"></i>+57 314 3434912</p>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-primary pl-3" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
+               <div style="margin-left: 350px;"></div>
+                <div>                                      
+                <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+            </div>    
+            </div>
             </div>
         </div>
     </div>
@@ -78,7 +134,7 @@
                         <a href="index.html" class="nav-item nav-link">Inicio</a>
                         <a href="about.html" class="nav-item nav-link">Historia</a>
                         <a href="service.html" class="nav-item nav-link">Servicios</a>
-                        <a href="package.html" class="nav-item nav-link">Reseñas</a>
+                        
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Turismos</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
