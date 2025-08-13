@@ -95,21 +95,60 @@
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <style>
+        .tooltip-custom {
+            position: relative;
+            display: inline-block;
+        }
+            .tooltip-custom .tooltip-text {
+                visibility: hidden;
+                width: 140px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 8px;
+                position: absolute;
+                z-index: 9999;
+                top: 125%; /* Abajo del ícono */
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s;
+                font-size: 0.9rem;
+            }
+        .tooltip-custom:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        </style>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>municipiodeiza23@gmail.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>municipiodeiza23@gmail.com
                         <p class="text-body px-3">|</p>
                         <p><i class="fa fa-phone-alt mr-2"></i>+57 314 3434912</p>
                     </div>
                 </div>
                 <div style="margin-left: 350px;"></div>
-                <div>                                      
-                <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+                                                <div>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Gastronomía típica</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Naturaleza y árboles</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Montañas de Iza</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+                                                        <span class="tooltip-text">Senderismo y aventura</span>
+                                                    </span>
             </div>    
             </div>
             </div>
@@ -175,8 +214,66 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                <h1>Tours & Travel Services</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Servicios</h6>
+                <h1>Recomendaciones Hoteleras</h1>
+            </div>
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <img src="img/destination-1.jpg" alt="Destino" style="height: 200px; width: 200px; object-fit: cover; margin-bottom: 10px; border-radius: 12px;">
+                        <h5 class="mb-2">Hotel Santa Isabel</h5>
+                        <p class="m-0">La principal característica de este hotel es su diseño único y artístico. Cada rincón está cuidadosamente decorado, ofreciendo una experiencia visualmente estimulante y distinta, 
+                            ideal para quienes aprecian la estética y la originalidad.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <img src="img/destination-1.jpg" alt="Destino" style="height: 200px; width: 200px; object-fit: cover; margin-bottom: 10px; border-radius: 12px;">
+                        <h5 class="mb-2">Hotel Maxiruma-Villa Tamauka</h5>
+                        <p class="m-0" style="font-weight: normal;">Este hotel se distingue por su lujo y servicio de primera clase. Ofrece comodidades exclusivas, atención personalizada y una experiencia de alta gama para una estadía inolvidable.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <img src="img/destination-1.jpg" alt="Destino" style="height: 200px; width: 200px; object-fit: cover; margin-bottom: 10px; border-radius: 12px;">
+                        <h5 class="mb-2">Hotel Tonsuca<h5></h5><br>
+                        <p class="m-0">En este hotel, la tranquilidad es uno de sus puntos fuertes.
+                             Es ideal para quienes buscan un escape del ruido de la ciudad y prefieren
+                              un ambiente sereno y relajante.</p>
+                    </div>
+                </div>
+                
+              
+                <div class="col-lg-4 col-md-6 mb-4" style="margin-left: 200px;">
+                  <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <img src="img/destination-1.jpg" alt="Destino" style="height: 200px; width: 200px; object-fit: cover; margin-bottom: 10px; border-radius: 12px;">
+                    <h5 class="mb-2">Hotel Casona Nuñez</h5>
+                    <p class="m-0">Lo que hace especial a este hotel es su ubicación céntrica y estratégica. Es perfecto para turistas o viajeros de negocios que desean tener fácil acceso a los principales puntos de interés, restaurantes y zonas comerciales.</p>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <img src="img/destination-1.jpg" alt="Destino" style="height: 200px; width: 200px; object-fit: cover; margin-bottom: 10px; border-radius: 12px;">
+                        <h5 class="mb-2">Hospedaje El Mirador</h5>
+                        <p class="m-0">Este hotel es famoso por su enfoque ecológico y sostenible. 
+                        Es la opción perfecta para viajeros conscientes del medio ambiente 
+                        que buscan una experiencia que respete la naturaleza y promueva prácticas 
+                        responsables.</p>
+                    </div>
+                </div>
+                
+                 
+    <!-- Service End -->
+    
+    
+    <!-- Service Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Servicios</h6>
+                <h1>Recomendaciones Hoteleras</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
@@ -225,6 +322,7 @@
         </div>
     </div>
     <!-- Service End -->
+
 
 
     <!-- Testimonial Start -->

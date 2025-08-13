@@ -93,6 +93,33 @@
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <style>
+        .tooltip-custom {
+            position: relative;
+            display: inline-block;
+        }
+            .tooltip-custom .tooltip-text {
+                visibility: hidden;
+                width: 140px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 8px;
+                position: absolute;
+                z-index: 9999;
+                top: 125%; /* Abajo del ícono */
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s;
+                font-size: 0.9rem;
+            }
+        .tooltip-custom:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        </style>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
@@ -103,11 +130,23 @@
                     </div>
                 </div>
                 <div style="margin-left: 350px;"></div>
-                <div>                                      
-                <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+                                                <div>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Gastronomía típica</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Naturaleza y árboles</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Montañas de Iza</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+                                                        <span class="tooltip-text">Senderismo y aventura</span>
+                                                    </span>
             </div>    
             </div>
             </div>
@@ -233,6 +272,7 @@
                     <div class="d-flex mb-4 mb-lg-0">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 110px; width: 110px;">
                             <i class="fa fa-3x fa-water text-white"></i>
+                            <img src="img/destination-1.jpg" alt="Destino" style="height: 60px; width: 60px; object-fit: cover; margin-left: 8px; border-radius: 8px;">
                         </div>
                         <div class="d-flex flex-column">
                             <h4 class="">Aguas termales</h4>
@@ -243,9 +283,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="d-flex mb-4 mb-lg-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 110px; width: 110px;">
-                           <i class="fa fa-3x fa-utensils text-white"></i>
-                        </div>
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 110px; width: 110px;">
+                                    <i class="fa fa-3x fa-utensils text-white"></i>
+                                    <img src="img/destination-1.jpg" alt="Destino" style="height: 60px; width: 60px; object-fit: cover; margin-left: 8px; border-radius: 8px;">
+                                </div>
                         <div class="d-flex flex-column">
                             <h4 class="">Gastronomía </h4>
                             <p class="m-0">La cocina tradicional boyacense
@@ -256,9 +297,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="d-flex mb-4 mb-lg-0">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 110px; width: 110px;">
-                           <i class="fa fa-3x fa-tree text-white"></i>
-                        </div>
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 110px; width: 110px;">
+                                    <i class="fa fa-3x fa-tree text-white"></i>
+                                    <img src="img/destination-1.jpg" alt="Destino" style="height: 60px; width: 60px; object-fit: cover; margin-left: 8px; border-radius: 8px;">
+                                </div>
                         <div class="d-flex flex-column">
                             <h4 class="">Paisaje Natural</h4>
                             <p class="m-0"> Un ambiente natural tranquilo y acogedor
@@ -468,11 +510,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 pb-2">
                     <div class="blog-item">
                         <div class="position-relative">
-                            <img class="img-fluid w-100 img-mismo-tamano" src="img/blog-1.jpg" alt="">
+                            <img class="img-fluid w-100 img-mismo-tamano" src="img/blog-1.jpg">
                         </div>
                         <div class="bg-white p-4">
                             <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Ferias y Fiestas en honor al Divino 
+                                <a class="text-primary text-uppercase text-decoration-none" >Ferias y Fiestas en honor al Divino 
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salvador de la Piedra</a>
                             </div>
                             <a class="h5 m-0 text-decoration-none" href="">Incluyen ciclo-paseos nocturnos, feria comercial y ganadera, juegos tradicionales, concursos de declamacion
@@ -483,11 +525,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 pb-2">
                     <div class="blog-item">
                         <div class="position-relative">
-                            <img class="img-fluid w-100 img-mismo-tamano" src="img/bloog.jpeg" alt="">
+                            <img class="img-fluid w-100 img-mismo-tamano" src="img/bloog.jpeg" >
                         </div>
                         <div class="bg-white p-4">
                             <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebracion del Patrimonio
+                                <a class="text-primary text-uppercase text-decoration-none" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celebracion del Patrimonio
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cultural y Natural</a>
                             </div>
                             <a class="h5 m-0 text-decoration-none" href="">Se realizan exposiciones de fotografía y pintura, 
@@ -498,13 +540,13 @@
                 <div class="col-lg-4 col-md-6 mb-4 pb-2">
                     <div class="blog-item">
                         <div class="position-relative">
-                            <img class="img-fluid w-100 img-mismo-tamano" src="img/blog-3.jpg" alt="">
+                            <img class="img-fluid w-100 img-mismo-tamano" src="img/blog-3.jpg" >
                         </div>
                         <div class="bg-white p-4">
                             <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Festival del Postre Izano</a>
+                                <a class="text-primary text-uppercase text-decoration-none" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Festival del Postre Izano</a>
                             </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Un evento gastronómico donde los participantes compiten por el mejor postre
+                            <a class="h5 m-0 text-decoration-none" >Un evento gastronómico donde los participantes compiten por el mejor postre
                                  tradicional de Iza, destacando la identidad culinaria del municipio que tanto lo representa.</a>
                         </div>
                     </div>
@@ -526,7 +568,7 @@
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
                 <div class="d-flex justify-content-start">
                      &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                      &nbsp;<a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                      &nbsp;<a class="btn btn-outline-primary btn-square mr-2" href="https://www.facebook.com/search/top?q=alcald%C3%ADa%20de%20iza%20boyac%C3%A1"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
       

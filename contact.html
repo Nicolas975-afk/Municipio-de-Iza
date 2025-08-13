@@ -91,21 +91,60 @@
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <style>
+        .tooltip-custom {
+            position: relative;
+            display: inline-block;
+        }
+            .tooltip-custom .tooltip-text {
+                visibility: hidden;
+                width: 140px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 8px;
+                position: absolute;
+                z-index: 9999;
+                top: 125%; /* Abajo del ícono */
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s;
+                font-size: 0.9rem;
+            }
+        .tooltip-custom:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        </style>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>municipiodeiza23@gmail.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>municipiodeiza23@gmail.com
                         <p class="text-body px-3">|</p>
                         <p><i class="fa fa-phone-alt mr-2"></i>+57 314 3434912</p>
                     </div>
                 </div>
                 <div style="margin-left: 350px;"></div>
-                <div>                                      
-                <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
-                <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+                                                <div>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-utensils" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Gastronomía típica</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-tree" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Naturaleza y árboles</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-mountain" style="color: #4CAF50; font-size: 2rem; margin-right: 8px;"></i>
+                                                        <span class="tooltip-text">Montañas de Iza</span>
+                                                    </span>
+                                                    <span class="tooltip-custom">
+                                                        <i class="fas fa-hiking" style="color: #4CAF50; font-size: 2rem;"></i>
+                                                        <span class="tooltip-text">Senderismo y aventura</span>
+                                                    </span>
             </div>    
             </div>
             </div>
