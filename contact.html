@@ -280,6 +280,152 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- Aquí va el código del muñequito animado -->
+<!-- Muñequito animado con ambos brazos que salen hacia afuera y saludan arriba -->
+<div id="muneco-iza" class="saludando" style="
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 99999;
+    cursor: pointer;
+    transition: transform 0.2s;
+">
+    <svg id="svg-muneco" width="100" height="100" viewBox="0 0 100 100">
+        <!-- Sombra -->
+        <ellipse cx="50" cy="94" rx="20" ry="6" fill="#bbb" opacity="0.3"/>
+        <!-- Cabeza -->
+        <circle cx="50" cy="34" r="19" fill="#fff" stroke="#7ec97e" stroke-width="4"/>
+        <ellipse cx="43" cy="40" rx="4" ry="2.5" fill="#ffd6d6" opacity="0.7"/>
+        <ellipse cx="57" cy="40" rx="4" ry="2.5" fill="#ffd6d6" opacity="0.7"/>
+        <!-- Cuerpo -->
+        <rect x="39" y="53" width="22" height="28" rx="11" fill="#a5ff95" stroke="#7ec97e" stroke-width="4"/>
+        <!-- Brazo izquierdo animable hacia afuera y arriba -->
+        <rect id="brazo-izq" x="25" y="53" width="8" height="22" rx="4" fill="#fff" stroke="#7ec97e" stroke-width="4"/>
+        <!-- Brazo derecho animable hacia afuera y arriba -->
+        <rect id="brazo-der" x="67" y="53" width="8" height="22" rx="4" fill="#fff" stroke="#7ec97e" stroke-width="4"/>
+        <!-- Piernas alineadas -->
+        <rect x="43" y="81" width="8" height="16" rx="4" fill="#7ec9ff" stroke="#7ec97e" stroke-width="4"/>
+        <rect x="51" y="81" width="8" height="16" rx="4" fill="#7ec9ff" stroke="#7ec97e" stroke-width="4"/>
+        <!-- Ojos grandes -->
+        <ellipse cx="46" cy="33" rx="2.7" ry="3" fill="#555"/>
+        <ellipse cx="54" cy="33" rx="2.7" ry="3" fill="#555"/>
+        <!-- Brillo de ojos -->
+        <ellipse cx="47" cy="32" rx="1" ry="1.3" fill="#fff" opacity="0.7"/>
+        <ellipse cx="55" cy="32" rx="1" ry="1.3" fill="#fff" opacity="0.7"/>
+        <!-- Boca sonriente -->
+        <path d="M46 41 Q50 46 54 41" stroke="#e58b8b" stroke-width="2.5" fill="none"/>
+        <!-- Sombrero campesino -->
+        <ellipse cx="50" cy="18" rx="16" ry="6" fill="#ffe9b3" stroke="#d2b97b" stroke-width="3"/>
+        <rect x="38" y="8" width="24" height="10" rx="5" fill="#ffe9b3" stroke="#d2b97b" stroke-width="3"/>
+    </svg>
+</div>
+<div id="mensaje-iza" style="
+    display:none;
+    position: fixed;
+    bottom: 130px;
+    left: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 18px 22px;
+    font-size: 1.1rem;
+    color: #388e3c;
+    z-index: 100000;
+    max-width: 320px;
+">
+</div>
+<style>
+@keyframes saludoArribaFueraIzq {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(-80deg); }
+    30%  { transform: rotate(0deg); }
+    45%  { transform: rotate(-80deg); }
+    60%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+@keyframes saludoArribaFueraDer {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(80deg); }
+    30%  { transform: rotate(0deg); }
+    45%  { transform: rotate(80deg); }
+    60%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+#muneco-iza.saludando #brazo-izq {
+    transform-origin: 29px 53px;
+    animation: saludoArribaFueraIzq 1.2s linear infinite;
+}
+#muneco-iza.saludando #brazo-der {
+    transform-origin: 71px 53px;
+    animation: saludoArribaFueraDer 1.2s linear infinite;
+}
+@keyframes saltar {
+    0%   { transform: translateY(0); }
+    10%  { transform: translateY(-18px); }
+    20%  { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    40%  { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    60%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+#muneco-iza.saltando {
+    animation: saltar 1.2s ease-in-out;
+}
+#muneco-iza:hover {
+    transform: scale(1.09) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(100,200,100,0.15);
+}
+</style>
+<script>
+const mensajesIza = [
+    "¡Iza es el Nido Verde de Boyacá! Ven y respira aire puro.",
+    "Iza es el municipio con el nombre más corto de Colombia, con solo tres letras",
+   "En 1895 intentaron cambiar su nombre a Santa Isabel porque iza significaba concubina en el diccionario",
+   "Es Pueblo Patrimonio Nacional desde 2002 por su valor histórico y arquitectónico",
+   "Con 34 km² y 2,300 habitantes, es el segundo municipio más pequeño de Boyacá",
+    "¿Sabías que las aguas termales de Iza son famosas por sus propiedades medicinales?",
+    "El Festival del Postre Izano es uno de los eventos más esperados cada año.",
+    "Iza conserva una arquitectura colonial encantadora en su centro histórico.",
+    "La naturaleza y la tranquilidad hacen de Iza un destino ideal para descansar.",
+    "En Iza puedes disfrutar de la mejor gastronomía boyacense.",
+    "La Piedra Milagrosa del Divino Salvador fue encontrada en 1748 cuando un rayo de luz reveló una imagen sagrada",
+    "Es conocido como el Nido Verde de Boyacá por sus paisajes naturales",
+    "Fue el primer municipio de Boyacá con mayor número de telares, llevando ruanas hasta Hollywood",
+    "Pertenece a la Red Nacional de Pueblos que Enamoran de Fontur Colombia",
+    "Su nombre chibcha significa lugar de curación por las propiedades medicinales de sus aguas",
+    "Es considerado la capital de los postres boyacenses, famoso por sus dulces de frutas y chocolate",
+    "Los petroglifos de Usamena son un tesoro arqueológico de la región.",
+    "El Templo Parroquial del Divino Salvador es un ícono religioso de Iza."
+];
+
+let mensajeActivo = false;
+const muneco = document.getElementById('muneco-iza');
+const mensaje = document.getElementById('mensaje-iza');
+
+muneco.addEventListener('click', function() {
+    if (mensajeActivo) return;
+    mensajeActivo = true;
+    mensaje.style.display = 'block';
+    mensaje.innerHTML = mensajesIza[Math.floor(Math.random() * mensajesIza.length)];
+    // Animar muñequito: solo salto
+    muneco.classList.remove('saludando');
+    muneco.classList.add('saltando');
+    setTimeout(() => { muneco.classList.remove('saltando'); }, 1200);
+    setTimeout(() => {
+        mensaje.style.display = 'none';
+        mensajeActivo = false;
+        muneco.classList.add('saludando');
+    }, 6000);
+});
+
+mensaje.addEventListener('click', function() {
+    mensaje.style.display = 'none';
+    mensajeActivo = false;
+    muneco.classList.add('saludando');
+});
+</script>
+<!-- Fin muñequito animado -->
 </body>
 
 </html>
