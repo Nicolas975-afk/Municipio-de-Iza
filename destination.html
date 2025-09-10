@@ -214,68 +214,157 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destination</h6>
-                <h1>Explore Top Destination</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Turismo Religioso</h6>
+                <h1>TURISMO RELIGIOSO</h1>
+           <!DOCTYPE html>
+  <style>
+    body {
+      background: #fdf6f0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card-container {
+      perspective: 1000px;
+      margin-bottom: 30px;
+    }
+
+    .card-flip {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .card-container:hover .card-flip {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-back h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #8b0000;
+    }
+
+    .card-back p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="row">
+    <!-- Tarjeta 1 -->
+    <div class="col-md-4">
+      <div class="card-container">
+        <div class="card-flip">
+          <div class="card-front">
+            <img src="img/religion1.jpg" alt="Divino Salvador">
+          </div>
+          <div class="card-back">
+            <div>
+              <h5>La Piedra del Divino Salvador</h5>
+              <p>Una roca con el rostro del Salvador hallada hace 270 años. Se le atribuyen milagros y es centro de peregrinación.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col-md-4">
+      <div class="card-container">
+        <div class="card-flip">
+          <div class="card-front">
+            <img src="img/religion2.jpg" alt="Fiestas Patronales">
+          </div>
+          <div class="card-back">
+            <div>
+              <h5>Fiestas Religiosas</h5>
+              <p>Celebraciones en honor al Divino Salvador y San Isidro Labrador, con procesiones, música y tradición.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col-md-4">
+      <div class="card-container">
+        <div class="card-flip">
+          <div class="card-front">
+            <img src="img/religion3.jpg" alt="Sanación Ancestral">
+          </div>
+          <div class="card-back">
+            <div>
+              <h5>Sanación Espiritual</h5>
+              <p>Desde tiempos muiscas, Iza ha sido tierra de descanso y renovación espiritual, con termales y rituales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+        </div>
+    </div>
+    <!-- Destination Start -->
+      <!-- About 2 Start   -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-1.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United States</h5>
-                            <span>100 Cities</span>
-                        </a>
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 " src="img/about-9.jpg" style="object-fit: cover;">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-2.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United Kingdom</h5>
-                            <span>100 Cities</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-3.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Australia</h5>
-                            <span>100 Cities</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-4.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">India</h5>
-                            <span>100 Cities</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-5.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">South Africa</h5>
-                            <span>100 Cities</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-6.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Indonesia</h5>
-                            <span>100 Cities</span>
-                        </a>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h1 class="mb-3">¿Qué relevancia tiene para el municipio?</h1>
+                        <p>El fervor religioso y la historia del Divino Salvador han posicionado a Iza como un destino de turismo religioso. La administración municipal y la iglesia han trabajado en conjunto para promover este aspecto, buscando que Iza sea un "infaltable" en el turismo de bienestar y fe en Colombia.
+
+Además del turismo, la religión ha influido en la arquitectura, con el Templo Parroquial del Divino Salvador.</p>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Destination Start -->
+    <!-- About 2 End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
