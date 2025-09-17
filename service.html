@@ -399,8 +399,121 @@ document.getElementById('btn-prev').onclick = function() { if(idx>0){ idx--; mos
 document.getElementById('btn-next').onclick = function() { if(idx<eventosIza.length-1){ idx++; mostrarEvento(idx); } };
 mostrarEvento(idx);
 </script>
+<!-- Calendario de actividades de Iza interactivo y llamativo -->
+<div class="container my-5" style="max-width: 900px;">
+    <h2 class="text-center mb-4" style="color: #388e3c;">Calendario de Actividades en Iza</h2>
+    <div id="calendario-iza" class="row">
+        <!-- Las tarjetas de eventos se llenan con JS -->
+    </div>
+    <div class="text-muted text-center mt-3" style="font-size:0.95rem;">
+        * Consulta en la Alcaldía de Iza o redes sociales para fechas exactas y programación detallada.
+    </div>
 </div>
-</div>
+<style>
+.card-evento-iza {
+    background: linear-gradient(135deg, #e8ffe8 60%, #b7e7b7 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(80,180,80,0.13);
+    margin: 18px 12px;
+    padding: 22px 18px 18px 18px;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 2px solid #a5ff95;
+    min-height: 210px;
+    position: relative;
+    overflow: hidden;
+}
+.card-evento-iza:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(60,180,60,0.18);
+    border-color: #388e3c;
+}
+.card-evento-iza .fecha {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+.card-evento-iza .actividad {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #388e3c;
+    margin-bottom: 8px;
+}
+.card-evento-iza .descripcion {
+    font-size: 1.05rem;
+    color: #333;
+}
+.card-evento-iza .icono {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    font-size: 3.2rem;
+    opacity: 0.13;
+    color: #388e3c;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .card-evento-iza { margin: 12px 0; }
+}
+</style>
+<script>
+// filepath: c:\Escritorio 2\Municipio de Iza\Municipio-de-Iza-main\service.html
+const eventosCalendario = [
+    {
+        fecha: "Julio 2024",
+        actividad: "Festival del Postre Izano",
+        descripcion: "Evento anual donde se celebra la tradición repostera de Iza, con degustaciones, concursos y muestras culturales.",
+        icono: "🍰"
+    },
+    {
+        fecha: "Semana Santa (Marzo/Abril)",
+        actividad: "Procesiones y celebraciones religiosas",
+        descripcion: "Recorridos solemnes, misas y actividades religiosas en el Templo Parroquial del Divino Salvador.",
+        icono: "⛪"
+    },
+    {
+        fecha: "Agosto 2025",
+        actividad: "Fiestas Patronales del Divino Salvador",
+        descripcion: "Celebración religiosa y cultural con música, danzas, ferias y actividades para toda la familia.",
+        icono: "🎉"
+    },
+    {
+        fecha: "Todo el año",
+        actividad: "Visitas a las Aguas Termales",
+        descripcion: "Disfruta de las aguas termales de Iza, famosas por sus propiedades medicinales.",
+        icono: "💧"
+    },
+    {
+        fecha: "Octubre 2025",
+        actividad: "Festival de la Ruana y el Telar",
+        descripcion: "Evento cultural que resalta la tradición textil de Iza, con exposiciones, talleres y pasarela de ruanas.",
+        icono: "🧶"
+    },
+    {
+        fecha: "Diciembre 2025",
+        actividad: "Novenas y Alumbrados Navideños",
+        descripcion: "Celebraciones tradicionales con música, luces y actividades para niños y familias.",
+        icono: "🎄"
+    }
+];
+
+const calendarioCont = document.getElementById('calendario-iza');
+calendarioCont.innerHTML = eventosCalendario.map(ev => `
+    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card-evento-iza w-100" tabindex="0" aria-label="${ev.actividad}">
+            <div class="icono">${ev.icono}</div>
+            <div class="fecha">${ev.fecha}</div>
+            <div class="actividad">${ev.actividad}</div>
+            <div class="descripcion">${ev.descripcion}</div>
+        </div>
+    </div>
+`).join('');
+</script>
+        </div>
+        </div>
+    </div>
+<!-- Fin calendario de actividades interactivo -->
   <!-- Footer Start -->
 <footer style="width:100vw; background:#222; color:#ccc; margin:0; padding:0; left:0;">
     <div class="row pt-5 px-0 mx-0" style="margin:0; padding:0;">
