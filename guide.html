@@ -100,11 +100,30 @@
 .about-section-custom .text-muted {
     color: #0a0a0a !important; /* Un tono más claro para los textos secundarios */
 }
+
+/* NUEVO CSS PARA UNIFORMAR LAS IMÁGENES DE ARTESANÍAS */
+.team-img img {
+    width: 100% !important;
+    height: 250px !important; /* Altura fija para todas las imágenes */
+    object-fit: cover !important; /* Mantiene la proporción y recorta si es necesario */
+    object-position: center !important; /* Centra la imagen */
+    display: block !important;
+}
+
+/* Opcional: Añadir un efecto hover suave */
+.team-item:hover .team-img img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.team-img {
+    overflow: hidden; 
+}
     </style>
 </head>
 
 <body>
-    <!-- Coloca esto justo después de la etiqueta <body> -->
+    
 <div class="fondo-olas"></div>
 
 <body>
