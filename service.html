@@ -85,6 +85,60 @@
     height: 100%;
     display: block;
 }
+/* ...existing code... */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+    .fondo-olas {
+        height: 120px !important;
+    }
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 180px !important;
+    }
+    .img-mismo-tamano,
+    .destino-img {
+        height: 90px !important;
+        border-radius: 4px !important;
+    }
+    .about-text, .team-item {
+        padding: 0.7rem !important;
+        margin: 0 !important;
+        font-size: 0.95rem !important;
+    }
+    .navbar-brand h1 {
+        font-size: 1.1rem !important;
+    }
+    .footer, .bg-dark {
+        padding: 0.7rem !important;
+        font-size: 0.95rem !important;
+    }
+    .map-container iframe {
+        height: 140px !important;
+    }
+    .page-header .container {
+        min-height: 120px !important;
+    }
+    .team-item h4, .about-info h2 {
+        font-size: 1rem !important;
+    }
+    .team-item p, .about-info p {
+        font-size: 0.9rem !important;
+    }
+    /* Elimina márgenes fijos */
+    [style*="margin-left: 350px"], [style*="margin-left: 600px"] {
+        margin-left: 0 !important;
+    }
+    .container, .container-lg, .container-fluid {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+/* ...existing code... */
     </style>
 </head>
 
